@@ -3,7 +3,7 @@ import { styles, layout } from "../constant";
 
 const FAQ = () => {
   return (
-    <div className="grid lg:grid-cols-2 sm:grid-cols-1">
+    <div className="">
       <div className="px-4"></div>
 
       <div className="space-y-4">

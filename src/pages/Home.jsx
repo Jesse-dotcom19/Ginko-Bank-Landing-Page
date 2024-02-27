@@ -10,16 +10,17 @@ const Home = () => {
       <Hero />
 
       <section className={`${styles.container}`}>
-        <div className="sm:py-12 lg:py-16">
+        <div className="py-12">
           <h2 className={`${styles.heading2}`}>
             One Banking App For Everything.
           </h2>
+          
           <div className="grid grid-rows-1 md:grid-cols-2 gap-4">
 
 
             <div className="grid grid-rows-1 md:grid-cols-2 mt-8 gap-6">
         
-              <div className="border-2 border-gray-200 p-6 rounded-md md:h-[300px]">
+              <div className="border-2 border-gray-200 p-6 rounded-md h-auto">
                 <img
                   src="/src/assets/home/badge-instant-transactions.svg"
                   alt="instant-transactions"
@@ -35,7 +36,7 @@ const Home = () => {
               </div>
 
 
-              <div className=" border-2 border-gray-200 p-6 rounded-md md:h-[300px]">
+              <div className="border-2 border-gray-200 p-6 rounded-md md:h-[300px]">
                 <img
                   src="/src/assets/home/badge-instant-transactions.svg"
                   alt="instant-transactions"
@@ -116,10 +117,9 @@ const Home = () => {
 
             
             <div className="flex justify-center md:justify-end mt-8 md:mt-0">
-                <img src="/src/assets/home/home-img-2.png" alt="screenshot" className=" w-auto h-25 md:h-50"/>
+                <img src="/src/assets/home/home-img-2.png" alt="screenshot" className="w-[250px] h-auto md:h-[900px] md:h-50"/>
                 </div>
 
-     
           </div>
         </div>
       </section>
@@ -148,6 +148,7 @@ const Home = () => {
                   banking so you can take control of your finances.
                 </p>
 
+
                 <div className="flex flex-col gap-5 mt-8 text-Black">
                   <div className="flex gap-3 align-middle">
                     <img
@@ -158,6 +159,7 @@ const Home = () => {
                     <p>Payments worldwide</p>
                   </div>
 
+
                   <div className="flex gap-3 align-middle">
                     <img
                       src="/src/assets/home/badge-inverted.svg"
@@ -166,6 +168,7 @@ const Home = () => {
                     />
                     <p>Payments worldwide</p>
                   </div>
+
 
                   <div className="flex gap-3 align-middle">
                     <img
@@ -181,6 +184,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+
 
       <section className="SAVING POTS">
         <div className={`${styles.container}`}>
@@ -255,32 +260,22 @@ const Home = () => {
                 <p className="text-gray-400 font-semibold">£400</p>
             </div>
 
-
-
-
-
-
-
             </div>
           </div>
         </div>
       </section>
 
+
+
       <section className="NOTIFICATIONS">
         <div className={`${styles.container}`}>
           <div class={`${layout.paddingY}`}>
             <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-              <div class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
-                <img
-                  src="/src/assets/home/home-img-4.svg"
-                  alt="hero-img"
-                  className="ml-auto"
-                />
-              </div>
 
               <div class="lg:py-24">
+              <p className={`${styles.preHeading}`}>Notifications</p>
                 <h2 className={`${styles.heading2}`}>
-                  Send and Receive Money in Seconds
+                Stay notified
                 </h2>
 
                 <p class={`${styles.paragraph} mt-4`}>
@@ -318,24 +313,25 @@ const Home = () => {
                     <p>Payments worldwide</p>
                   </div>
 
-                  <a href="#" className="flex flex-row gap-4 py-3 text-Blue">
-                    Compare Cards
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                      />
-                    </svg>
-                  </a>
+                  <div className="mt-4 mb-4 md:mt-0 md:mb-0">
+                  <ButtonText />
+                  </div>
+
+                  
+
+               
                 </div>
+
+                <div class="flex justify-center md:justify-end mt-8 md:mt-0">
+                <img
+                  src="/src/assets/home/home-img-4.svg"
+                  alt="hero-img"
+                  className="h-auto w-auto"
+                />
+              </div>
+
+
+
               </div>
             </div>
           </div>
@@ -360,21 +356,19 @@ const Home = () => {
             />
           </div>
 
-          <div className="flex xs:flex-col lg:flex-row justify-center gap-4 mt-6">
+          <div className="flex flex-col lg:flex-row justify-center gap-4 mt-6">
             <Button />
             <ButtonText />
-           
-         
           </div>
         </div>
       </section>
+      
 
       <section className="TESTIMONIAL">
-        <div className={`${styles.container}`}>
-          <div className={`${layout.marginY}`}>
+        <div className={`${styles.container} ${layout.marginY}`}>
             <p className={`${styles.preHeading}`}>Testimonials</p>
             <div className="mt-4">
-              <div className="flex justify-between">
+              <div className="flex flex-col md:flex-row md:justify-between space-y-4">
                 <h2 className={`${styles.heading2}`}>
                   People From All Around The World Use Ginko
                 </h2>
@@ -392,9 +386,10 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
+        
         </div>
       </section>
+
 
       <section className="TESTIMONIAL">
         <div className={`${styles.container}`}>
@@ -476,20 +471,16 @@ const Home = () => {
 
       <section className={`${styles.container}`}>
         <div class="py-4 my-10 bg-Light-Blue rounded-md p-8 md:p-12 lg:px-10 lg-py-10">
-          <div class="grid grid-cols-2 gap-1">
+          <div class="grid grid-rows-1 md:grid-cols-2 gap-1">
 
-            <div className="p-0 lg:p-12">
-              <img src="/src/assets/home/home-testimonial-img.jpg" alt="testimonial image" className="w-50 h-50 rounded-xl" />
-              </div>
-
-            <div className= "p-6">
-              <div className="pt-40">
-              <img src="/src/assets/home/stars.svg" alt="" className="w-auto h-5 mt-4" />
-              <p className={`${styles.heading3} text-Blue mt-4`}>
+            <div className= "p-2 md:p-6">
+              <div className="pt-0 md:pt-40">
+              <img src="/src/assets/home/stars.svg" alt="testimonial image" className="w-auto h-5 mt-4" />
+              <p className={`${styles.heading4} text-Blue mt-4`}>
               “As a small business owner, I used to waste so much time managing finances across multiple bank accounts. Ginko has been a game changer.”
               </p>
 
-              <div className="flex flex-col mt-4">
+              <div className="flex flex-col mt-4 mb-4">
               <p className="text-lg font-Black font-semibold">
                 Carl Seltzer
               </p>
@@ -498,8 +489,10 @@ const Home = () => {
               </p>
               </div>
 
-
-
+              
+            <div className="md:p-12">
+              <img src="/src/assets/home/home-testimonial-img.jpg" alt="testimonial image" className="w-50 h-50 rounded-xl" />
+              </div>
 
               </div>
   
@@ -519,6 +512,9 @@ const Home = () => {
       <section className="FAQ">
         <div className={`${styles.container}`}>
           <div className={`${layout.marginY}`}>
+            <h1 className={`${styles.heading2}`}>
+              Frequently Asked Questions
+            </h1>
             <FAQ />
 
           </div>
